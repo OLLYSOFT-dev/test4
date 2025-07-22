@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFarm</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="theme-color" content="#355e3b">
+
+
+    <style>
+        body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+header {
+    background-color: #5ebd6c;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+span {
+    color: #fdec00;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    height: 150px;
+    align-items: left;
+    display: flex;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+nav a.login, nav a.signup {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+}
+
+main {
+    padding: 20px;
+}
+
+.dashboard h2, .disease-detection h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    padding: 35px;
+    border-radius: 45px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1 1 calc(50% - 10px);
+    min-width: 200px;
+    box-sizing: border-box;
+}
+
+.weather {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.calendar, .tips, .status {
+    background-color: white;
+}
+
+.upload-area {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.drop-zone {
+    border: 2px dashed #4CAF50;
+    padding: 40px;
+    margin-bottom: 10px;
+    background-color: #f0f8f0;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.select-image, .analyze-image {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 14px;
+}
+
+footer {
+    background-color: #355e3b;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+    nav a {
+        margin: 5px 10px;
+        font-size: 14px;
+    }
+    .cards {
+        flex-direction: column;
+    }
+    .card {
+        flex: 1 1 100%;
+    }
+    .drop-zone {
+        padding: 20px;
+    }
+    .select-image, .analyze-image {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+    nav a {
+        font-size: 12px;
+    }
+    .dashboard h2, .disease-detection h2 {
+        font-size: 20px;
+    }
+    .card {
+        padding: 10px;
+    }
+}
+    </style>
+
+</head>
+<body>
+    <header>
+        <img src="icon.png" alt="SmartFarm Logo" class="logo">
+        <h2>SMART<span>FARM</span></h2>
+
+        <marquee behavior="scroll" direction="left" class="news-ticker">
+              <i> Welcome to SmartFarm! Your AI-powered farming assistant. 
+                Stay updated with the latest farming tips and weather forecasts.
+              </i>  
+        </marquee>
+        <nav>
+            <ul>
+               <i class="fa-solid fa-house-chimney-window"></i> <li><a href="index.html">Home</a></li>
+                <li><a href="disease.html">AI</a></li>
+                
+            </ul>
+        </nav>
+    
+        </header>
+        <section class="dashboard">
+            <h2>🌾 Farm Dashboard</h2>
+            <div class="cards">
+                <div class="card weather">
+                    <section class="weather-container">
+            <p id="location">Detecting location...</p>
+            <div id="weatherData" class="weather-card">
+                <p>Loading weather...</p>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+
+
+                </div>
+                <div class="card calendar">
+                    <h3>📅 Farming Calendar</h3>
+                    <p>Upcoming farming activities:<br>- Maize planting - Next week<br>- Fertilizer application - In 2 weeks<br>- Harvest season - 3 months</p>
+                </div>
+                <div class="card tips">
+                    <h3>💡 Smart Tips</h3>
+                    <ul>
+                        <li>Plant maize now for optimal growth in current weather conditions</li>
+                        <li>Consider rotating your crops to maintain soil health</li>
+                        <li>Detect illness early and manage herds efficiently.</li>
+                        <li>Utilize Data Analytics & AI</li>
+                        <li>Predict yield, detect anomalies, and optimize resource usage with machine learning models.</li>
+                        <li>Use historical data to improve future planning.</li>
+
+                        <li>Practice Sustainable Farming</li>
+                        <p>Reduce chemical usage, adopt organic inputs, and manage waste responsibly.</p>
+
+Invest in renewable energy sources like solar panels for farm operations.
+
+10. Stay Educated and Connected
+Participate in agri-tech forums, webinars, and farmer networks.
+
+Stay updated on new technologies and best practices.
+                       
+                    </ul>
+                </div>
+                <!-- <div class="card status">
+                    <h3>🌱 Farm Status</h3>
+                    <p>Soil moisture: Optimal<br>Pest alert: Low risk<br>Crop growth: 65% complete</p>
+                </div> -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 SmartFarm - AI-Powered Farming Assistant</p>
+        <p>Contact: support@smartfarm.app</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(() => console.log('Service Worker registered'))
+                .catch(err => console.error('Service Worker registration failed:', err));
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!-- 
+
+7dada2212257c8cc7b3c
+7dada2212257c8cc7b3c9617eefcbb1c
+
+
+
+
+
+
+
+
+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 -->

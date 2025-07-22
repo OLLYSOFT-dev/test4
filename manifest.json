@@ -1,0 +1,21 @@
+{
+    "name": "SmartFarm",
+    "short_name": "SmartFarm",
+    "description": "An AI-powered farming assistant for dashboard and disease detection.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#355e3b",
+    "theme_color": "#355e3b",
+    "icons": [
+        {
+            "src": "/icon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
